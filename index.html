@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#050505" />
+  <meta name="description" content="Islam Elmasery — Visual Director & Video Editor. Cinematic storytelling, color grading, and art direction." />
+  <title>Islam Elmasery | Visual Director</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            void: '#050505',
+            carbon: '#121212',
+            gold: '#D4AF37',
+            glass: 'rgba(255,255,255,0.06)',
+          },
+          fontFamily: {
+            display: ['Clash Display','sans-serif'],
+            body: ['Inter','sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="antialiased bg-void text-white selection:bg-gold selection:text-black">
+
+  <!-- Ambient -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <div class="ambient-blobs" aria-hidden="true">
+    <span class="blob blob-a"></span>
+    <span class="blob blob-b"></span>
+    <span class="blob blob-c"></span>
+  </div>
+
+  <!-- NAV -->
+  <header class="fixed inset-x-0 top-0 z-50">
+    <nav class="nav-shell mx-auto max-w-7xl px-6 md:px-10 py-5 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2">
+        <span class="text-xl font-display font-bold tracking-widest">ISLAM.<span class="text-gold">RAW</span></span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-6 text-sm tracking-widest uppercase">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#timeline">Timeline</a>
+        <a class="nav-link" href="#work">Work</a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <a href="#contact" class="btn btn-primary">
+          Start Project
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
+      </div>
+
+      <button class="md:hidden icon-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <a class="mobile-link" href="#about">About</a>
+        <a class="mobile-link" href="#timeline">Timeline</a>
+        <a class="mobile-link" href="#work">Work</a>
+        <a class="mobile-link" href="#contact">Contact</a>
+        <a class="btn btn-primary mt-4 justify-center" href="#contact">
+          Start Project <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="top">
+    <section class="hero relative min-h-screen w-full overflow-hidden">
+      <!-- Background images -->
+      <img src="1.png" class="hero-bg hidden md:block absolute inset-0 w-full h-full object-cover" style="object-position:right center;" alt="">
+      <img src="12.png" class="hero-bg block md:hidden absolute inset-0 w-full h-full object-cover" alt="">
+
+      <!-- Overlay -->
+      <div class="absolute inset-0 hero-overlay" aria-hidden="true"></div>
+
+      <div class="relative z-10 h-screen flex items-center px-6 md:px-20">
+        <div class="max-w-2xl">
+          <p class="kicker" data-reveal data-delay="0">Director & Editor</p>
+
+          <h1 class="hero-title font-display font-bold leading-[0.9]">
+            <span class="hero-name" data-reveal data-delay="120">ISLAM</span><br>
+            <span class="hero-last text-stroke" data-reveal data-delay="240">ELMASRY</span>
+          </h1>
+
+          <p class="mt-7 text-white/70 font-body max-w-xl text-lg md:text-xl"
+             data-reveal data-delay="360">
+            Crafting visual narratives that bridge the gap between imagination and reality.
+          </p>
+
+          <div class="mt-10 flex flex-col sm:flex-row gap-4 items-start" data-reveal data-delay="480">
+            <a href="#work" class="btn btn-primary">
+              View Work <i class="fa-solid fa-clapperboard"></i>
+            </a>
+            <a href="#contact" class="btn btn-ghost">
+              Book a Call <i class="fa-solid fa-phone"></i>
+            </a>
+          </div>
+
+          <div class="mt-10 flex gap-5 text-xl text-white/70" data-reveal data-delay="600" aria-label="Social links">
+            <a class="social" href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="social" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a class="social" href="#" aria-label="facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a class="social" href="#" aria-label="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+        <span class="scroll-dot"></span>
+      </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section py-28 md:py-36 px-6 md:px-20 bg-void relative">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+        <div class="relative group" data-reveal>
+          <div class="absolute -inset-1 bg-gradient-to-br from-gold/30 to-transparent opacity-60 blur-2xl group-hover:opacity-80 transition duration-1000"></div>
+          <div class="relative aspect-[4/5] overflow-hidden rounded-2xl card-outline">
+            <img src="1.jpeg" class="w-full h-full object-cover transition duration-700 group-hover:scale-[1.04]" alt="Islam Elmasery">
+            <div class="absolute inset-0 bg-gradient-to-t from-void via-transparent to-transparent opacity-70"></div>
+            <div class="absolute bottom-5 left-5 right-5">
+              <div class="glass p-4 rounded-xl flex items-center justify-between gap-4">
+                <div>
+                  <p class="text-sm text-white/70">Available for</p>
+                  <p class="font-display text-lg tracking-wide">Select Projects</p>
+                </div>
+                <a href="#contact" class="btn btn-mini">Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div data-reveal data-delay="120">
+          <h2 class="text-4xl md:text-6xl font-display font-bold mb-7">
+            A Decade of <br><span class="text-gold">Visual Excellence</span>
+          </h2>
+
+          <div class="space-y-5 text-white/70 font-body leading-relaxed text-base md:text-lg max-w-xl">
+            <p>
+              With a career spanning over 10 years, I’ve honed my craft as a Product Photographer, Video Editor,
+              and Visual Director—moving from early passion to professional cinematography.
+            </p>
+            <p>
+              I’ve contributed to major events like the <span class="text-white">Alexandria International Fair</span>
+              and collaborated with networks including <span class="text-white">Al-Arabiya</span> and
+              <span class="text-white">CNN Economic Channel</span>.
+            </p>
+          </div>
+
+          <div class="mt-10 flex flex-wrap gap-3">
+            <span class="pill">Cinematography</span>
+            <span class="pill">Color Grading</span>
+            <span class="pill">Sound Design</span>
+            <span class="pill">Art Direction</span>
+            <span class="pill">Retention Editing</span>
+          </div>
+
+          <div class="mt-10 grid grid-cols-3 gap-4 max-w-md">
+            <div class="stat" data-reveal data-delay="240">
+              <p class="stat-num">10+</p>
+              <p class="stat-label">Years</p>
+            </div>
+            <div class="stat" data-reveal data-delay="320">
+              <p class="stat-num">100+</p>
+              <p class="stat-label">Projects</p>
+            </div>
+            <div class="stat" data-reveal data-delay="400">
+              <p class="stat-num">5★</p>
+              <p class="stat-label">Delivery</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logo Wall -->
+      <div class="logo-wall mt-20" data-reveal>
+        <h3 class="logo-title">Trusted by</h3>
+        <div class="scroller" data-direction="left">
+          <div class="scroller__inner">
+            <img src="logos/1.png" alt="Partner">
+            <img src="logos/2.png" alt="Partner">
+            <img src="logos/3.png" alt="Partner">
+            <img src="logos/4.png" alt="Partner">
+            <img src="logos/5.png" alt="Partner">
+            <img src="logos/6.png" alt="Partner">
+            <img src="logos/7.png" alt="Partner">
+
+            <img src="logos/1.png" alt="Partner">
+            <img src="logos/2.png" alt="Partner">
+            <img src="logos/3.png" alt="Partner">
+            <img src="logos/4.png" alt="Partner">
+            <img src="logos/5.png" alt="Partner">
+            <img src="logos/6.png" alt="Partner">
+            <img src="logos/7.png" alt="Partner">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline" class="section py-24 px-6 md:px-20 bg-carbon/30">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-display font-bold" data-reveal>Career Timeline</h2>
+          <p class="mt-3 text-white/60 max-w-2xl mx-auto" data-reveal data-delay="120">
+            A quick view of the roles and collaborations that shaped my creative direction.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item" data-reveal>
+            <div class="dot dot-gold"></div>
+            <span class="date">2019 — Present</span>
+            <h3 class="role">Video Editor</h3>
+            <p class="meta">photographer & video editor</p>
+            <p class="desc">Metex company & Sawt Al-Dunya & AdHouse Agency & Al-Arabiya News Channel & CNN Economic Channel.</p>
+          </div>
+
+          <div class="timeline-item" data-reveal data-delay="140">
+            <div class="dot"></div>
+            <span class="date">2019 — 2021</span>
+            <h3 class="role">Freelance Creative</h3>
+            <p class="meta">Various International Clients</p>
+            <p class="desc">Delivered 100+ projects for YouTube creators and e-commerce brands. Specialized in retention editing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARSENAL -->
+    <section class="section py-24 bg-void">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <h2 class="text-4xl font-display font-bold" data-reveal>The <span class="text-gold">Arsenal</span></h2>
+          <p class="mt-3 text-white/60" data-reveal data-delay="120">Tools I use to craft motion, polish, and story.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="tool-card" data-reveal>
+            <i class="fa-solid fa-film text-3xl mb-4 text-white/70"></i>
+            <h3 class="text-lg md:text-xl font-bold mb-3">Premiere Pro</h3>
+            <div class="bar"><span style="width:95%"></span></div>
+          </div>
+
+          <div class="tool-card" data-reveal data-delay="90">
+            <i class="fa-solid fa-wand-magic-sparkles text-3xl mb-4 text-white/70"></i>
+            <h3 class="text-lg md:text-xl font-bold mb-3">After Effects</h3>
+            <div class="bar"><span style="width:85%"></span></div>
+          </div>
+
+          <div class="tool-card" data-reveal data-delay="180">
+            <i class="fa-solid fa-palette text-3xl mb-4 text-white/70"></i>
+            <h3 class="text-lg md:text-xl font-bold mb-3">DaVinci Resolve</h3>
+            <div class="bar"><span style="width:90%"></span></div>
+          </div>
+
+          <div class="tool-card" data-reveal data-delay="270">
+            <i class="fa-solid fa-camera text-3xl mb-4 text-white/70"></i>
+            <h3 class="text-lg md:text-xl font-bold mb-3">Photoshop</h3>
+            <div class="bar"><span style="width:88%"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="section py-24 px-6 md:px-10 bg-void">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12 max-w-7xl mx-auto">
+        <div>
+          <h2 class="text-5xl md:text-6xl font-display font-bold" data-reveal>
+            Selected <span class="text-stroke">Works</span>
+          </h2>
+          <p class="mt-3 text-white/60 max-w-xl" data-reveal data-delay="120">
+            Click any piece to watch in full screen.
+          </p>
+        </div>
+        <a href="https://islam-elmasry-works.netlify.app/" class="link-gold" target="_blank" rel="noreferrer" data-reveal data-delay="200">
+          View All Projects <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <button class="work-card" data-video="videos/video1.mp4" aria-label="Open Nike Commercial video" data-reveal>
+          <video class="work-video" autoplay muted loop playsinline preload="metadata">
+            <source src="videos/video1.mp4" type="video/mp4">
+          </video>
+          <div class="work-overlay"></div>
+          <div class="work-meta">
+            <h3>Nike Commercial</h3>
+            <p>Edit & Color Grade</p>
+          </div>
+          <div class="work-play"><i class="fa-solid fa-play"></i></div>
+        </button>
+
+        <button class="work-card" data-video="videos/video2.mp4" aria-label="Open Fashion Campaign video" data-reveal data-delay="90">
+          <video class="work-video" autoplay muted loop playsinline preload="metadata">
+            <source src="videos/video2.mp4" type="video/mp4">
+          </video>
+          <div class="work-overlay"></div>
+          <div class="work-meta">
+            <h3>Fashion Campaign</h3>
+            <p>Short Form Content</p>
+          </div>
+          <div class="work-play"><i class="fa-solid fa-play"></i></div>
+        </button>
+
+        <button class="work-card" data-video="videos/5.mp4" aria-label="Open Travel Documentary video" data-reveal data-delay="180">
+          <video class="work-video" autoplay muted loop playsinline preload="metadata">
+            <source src="videos/5.mp4" type="video/mp4">
+          </video>
+          <div class="work-overlay"></div>
+          <div class="work-meta">
+            <h3>Travel Documentary</h3>
+            <p>Direction & Editing</p>
+          </div>
+          <div class="work-play"><i class="fa-solid fa-play"></i></div>
+        </button>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section py-20 border-t border-white/5 bg-void">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <h2 class="text-2xl font-display font-bold mb-3 text-white/70" data-reveal>Education & Certification</h2>
+        <p class="text-white/50 mb-10" data-reveal data-delay="120">A few formal milestones supporting the craft.</p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="edu-card" data-reveal>
+            <h3 class="text-lg font-bold text-white">Digital Marketing Diploma</h3>
+            <p class="text-sm text-white/60 mt-1">Certified Professional</p>
+          </div>
+          <div class="edu-card" data-reveal data-delay="120">
+            <h3 class="text-lg font-bold text-white">Motion Graphics Specialist</h3>
+            <p class="text-sm text-white/60 mt-1">Advanced Coursework</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section py-28 md:py-36 px-6 bg-void relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-t from-gold/10 to-transparent pointer-events-none"></div>
+
+      <div class="max-w-4xl mx-auto text-center relative z-10">
+        <h2 class="text-5xl md:text-7xl font-display font-bold mb-6" data-reveal>
+          Let's Create <br> Something <span class="text-gold">Iconic</span>
+        </h2>
+
+        <p class="text-white/70 mb-10 max-w-xl mx-auto" data-reveal data-delay="120">
+          Ready to elevate your visual identity? I’m currently available for select freelance projects.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center" data-reveal data-delay="220">
+          <a href="mailto:contact@islamelmasery.com" class="btn btn-primary">
+            Get In Touch <i class="fa-solid fa-paper-plane"></i>
+          </a>
+          <a href="#work" class="btn btn-ghost">
+            See Highlights <i class="fa-solid fa-star"></i>
+          </a>
+        </div>
+
+        <div class="mt-12 flex justify-center gap-8 text-2xl" data-reveal data-delay="320" aria-label="Social links">
+          <a class="social" href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a class="social" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a class="social" href="#" aria-label="whatsapp"><i class="fa-brands fa-facebook"></i></a>
+          <a class="social" href="#" aria-label="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+
+<div class="mt-20 text-xs text-white/40 uppercase tracking-widest flex flex-wrap justify-center gap-2 text-center"
+     data-reveal data-delay="420">
+  <span>© 2026 Islam Elmasery. All Rights Reserved.</span>
+  <span>|</span>
+  <span>
+    Created by
+    <a href="https://wa.me/201095262372"
+       target="_blank"
+       class="text-gold hover:text-white transition">
+       Mostafa Mahros
+    </a>
+  </span>
+</div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Video Modal -->
+  <div class="modal" id="videoModal" aria-hidden="true" role="dialog" aria-label="Video player">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel" role="document">
+      <button class="modal-close" type="button" data-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <video id="modalVideo" controls playsinline></video>
+    </div>
+  </div>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
